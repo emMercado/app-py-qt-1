@@ -40,6 +40,19 @@
      <string>Calculator</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="btnCrud">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>150</y>
+      <width>191</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CRUD USERS</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
