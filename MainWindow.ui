@@ -27,6 +27,19 @@
      <string>Count Add &amp; Subtract</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="btn_calc">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>90</y>
+      <width>191</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Calculator</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

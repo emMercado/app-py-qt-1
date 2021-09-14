@@ -9,7 +9,10 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 from OtherWindow import Ui_OtherWindow
+from Calculator import Ui_calculator
+
 
 class Ui_window(object):
 
@@ -20,17 +23,28 @@ class Ui_window(object):
         #window.hide()
         self.window.show()
 
+    def openWindowCalc(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_calculator()
+        self.ui.setupUi (self.window)
+        #window.hide()
+        self.window.show()
+
     def setupUi(self, window):
         window.setObjectName("window")
         window.resize(800, 600)
         self.centralwidget = QtWidgets.QWidget(window)
         self.centralwidget.setObjectName("centralwidget")
         self.btn_open = QtWidgets.QPushButton(self.centralwidget)
-        self.btn_open.setGeometry(QtCore.QRect(290, 170, 191, 25))
+        self.btn_open.setGeometry(QtCore.QRect(40, 30, 191, 25))
         self.btn_open.setObjectName("btn_open")
+        self.btn_calc = QtWidgets.QPushButton(self.centralwidget)
+        self.btn_calc.setGeometry(QtCore.QRect(40, 90, 191, 25))
+        self.btn_calc.setObjectName("btn_calc")
         window.setCentralWidget(self.centralwidget)
 
         self.btn_open.clicked.connect(self.openWindow)
+        self.btn_calc.clicked.connect(self.openWindowCalc)
 
         self.retranslateUi(window)
         QtCore.QMetaObject.connectSlotsByName(window)
@@ -39,6 +53,7 @@ class Ui_window(object):
         _translate = QtCore.QCoreApplication.translate
         window.setWindowTitle(_translate("window", "Main window xd"))
         self.btn_open.setText(_translate("window", "Count Add Subtract"))
+        self.btn_calc.setText(_translate("window", "Calculator"))
 
 if __name__ == "__main__":
     import sys
