@@ -62,6 +62,7 @@ class Ui_calculator(object):
         QtCore.QMetaObject.connectSlotsByName(calculator)
 
     def btnOk_click(self):
+
         valueNum_1 = int(self.inputNum_1.text())
         valueNum_2 = int(self.inputNum_2.text())
 
@@ -75,24 +76,23 @@ class Ui_calculator(object):
             self.lblResult.setText(str(valueNum_1 / valueNum_2))
 
     def btnCancel_click(self):
-        value = int(self.ticket.text())
-        values = -1
-        self.ticket.setText(str(values + value))
+        self.lblResult.setText(str("Result"))
+        self.inputNum_1.setText(str(""))
+        self.inputNum_2.setText(str(""))
 
     def retranslateUi(self, calculator):
         _translate = QtCore.QCoreApplication.translate
         calculator.setWindowTitle(_translate("calculator", "Calculator"))
-        self.btnOk.setText(_translate("calculator", "Ok"))
-        self.radioBtnMult.setText(_translate("calculator", "Mult"))
-        self.radioBtnDiv.setText(_translate("calculator", "Div"))
-        self.radioBtnSumar.setText(_translate("calculator", "SUMAR"))
-        self.radioBtnRestar.setText(_translate("calculator", "RESTAR"))
-        self.lblResult.setText(_translate("calculator", "Result"))
+        self.btnOk.setText(_translate("calculator", "Calcular"))
+        self.radioBtnMult.setText(_translate("calculator", "Multiplicar"))
+        self.radioBtnDiv.setText(_translate("calculator", "Dividir"))
+        self.radioBtnSumar.setText(_translate("calculator", "Sumar"))
+        self.radioBtnRestar.setText(_translate("calculator", "Restar"))
+        self.lblResult.setText(_translate("calculator", "Resultado"))
         self.num_2.setText(_translate("calculator", "Number 2"))
         self.num_1.setText(_translate("calculator", "Number 1"))
-        self.btnCancel.setText(_translate("calculator", "Cancel"))
+        self.btnCancel.setText(_translate("calculator", "Clean"))
         self.lbl_igual.setText(_translate("calculator", "="))
-
 
 if __name__ == "__main__":
     import sys
