@@ -14,56 +14,17 @@
    <string>Main window xd</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="add">
-    <property name="geometry">
-     <rect>
-      <x>530</x>
-      <y>180</y>
-      <width>80</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>add</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="subtract">
-    <property name="geometry">
-     <rect>
-      <x>640</x>
-      <y>180</y>
-      <width>80</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>subtract</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="ticket">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>100</y>
-      <width>16</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>1</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="btn_open">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>350</y>
+      <x>40</x>
+      <y>30</y>
       <width>191</width>
       <height>25</height>
      </rect>
     </property>
     <property name="text">
-     <string>Open window 1</string>
+     <string>Count Add &amp; Subtract</string>
     </property>
    </widget>
   </widget>

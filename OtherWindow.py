@@ -17,10 +17,24 @@ class Ui_OtherWindow(object):
         OtherWindow.resize(523, 533)
         self.centralwidget = QtWidgets.QWidget(OtherWindow)
         self.centralwidget.setObjectName("centralwidget")
+        self.add = QtWidgets.QPushButton(self.centralwidget)
+        self.add.setGeometry(QtCore.QRect(530, 180, 80, 25))
+        self.add.setObjectName("add")
+        self.subtract = QtWidgets.QPushButton(self.centralwidget)
+        self.subtract.setGeometry(QtCore.QRect(640, 180, 80, 25))
+        self.subtract.setObjectName("subtract")
+        self.ticket = QtWidgets.QLabel(self.centralwidget)
+        self.ticket.setGeometry(QtCore.QRect(620, 100, 16, 17))
+        self.ticket.setObjectName("ticket")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(130, 130, 211, 171))
         self.label.setObjectName("label")
         OtherWindow.setCentralWidget(self.centralwidget)
+
+        self.add.clicked.connect(self.add_click)
+        self.add.clicked.connect(self.print_click)
+        self.subtract.clicked.connect(self.print_click_subtract)
+        self.subtract.clicked.connect(self.down_click)
 
         self.retranslateUi(OtherWindow)
         QtCore.QMetaObject.connectSlotsByName(OtherWindow)
@@ -29,13 +43,29 @@ class Ui_OtherWindow(object):
         _translate = QtCore.QCoreApplication.translate
         OtherWindow.setWindowTitle(_translate("OtherWindow", "OtherWindow"))
         self.label.setText(_translate("OtherWindow", "Hello this is window 1"))
+        self.add.setText(_translate("OtherWindow", "add"))
+        self.subtract.setText(_translate("OtherWindow", "subtract"))
+        self.ticket.setText(_translate("OtherWindow", "1"))
 
+    def print_click(self):
+        print("click!")
+    def print_click_subtract(self):
+        print("se resto!")
+
+    def add_click(self):
+        value = int(self.ticket.text())
+        values = 1
+        self.ticket.setText(str(values + value))
+    def down_click(self):
+        value = int(self.ticket.text())
+        values = -1
+        self.ticket.setText(str(values + value))
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     OtherWindow = QtWidgets.QMainWindow()
-    ui = Ui_OtherWIndow()
+    ui = Ui_OtherWindow()
     ui.setupUi(OtherWindow)
     OtherWindow.show()
     sys.exit(app.exec_())

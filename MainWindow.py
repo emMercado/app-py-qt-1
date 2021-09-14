@@ -17,7 +17,7 @@ class Ui_window(object):
         self.window = QtWidgets.QMainWindow()
         self.ui = Ui_OtherWindow()
         self.ui.setupUi (self.window)
-        window.hide()
+        #window.hide()
         self.window.show()
 
     def setupUi(self, window):
@@ -25,23 +25,10 @@ class Ui_window(object):
         window.resize(800, 600)
         self.centralwidget = QtWidgets.QWidget(window)
         self.centralwidget.setObjectName("centralwidget")
-        self.add = QtWidgets.QPushButton(self.centralwidget)
-        self.add.setGeometry(QtCore.QRect(530, 180, 80, 25))
-        self.add.setObjectName("add")
-        self.subtract = QtWidgets.QPushButton(self.centralwidget)
-        self.subtract.setGeometry(QtCore.QRect(640, 180, 80, 25))
-        self.subtract.setObjectName("subtract")
-        self.ticket = QtWidgets.QLabel(self.centralwidget)
-        self.ticket.setGeometry(QtCore.QRect(620, 100, 16, 17))
-        self.ticket.setObjectName("ticket")
         self.btn_open = QtWidgets.QPushButton(self.centralwidget)
-        self.btn_open.setGeometry(QtCore.QRect(130, 350, 191, 25))
+        self.btn_open.setGeometry(QtCore.QRect(290, 170, 191, 25))
         self.btn_open.setObjectName("btn_open")
         window.setCentralWidget(self.centralwidget)
-        self.add.clicked.connect(self.add_click)
-        self.add.clicked.connect(self.print_click)
-        self.subtract.clicked.connect(self.print_click_subtract)
-        self.subtract.clicked.connect(self.down_click)
 
         self.btn_open.clicked.connect(self.openWindow)
 
@@ -51,24 +38,7 @@ class Ui_window(object):
     def retranslateUi(self, window):
         _translate = QtCore.QCoreApplication.translate
         window.setWindowTitle(_translate("window", "Main window xd"))
-        self.add.setText(_translate("window", "add"))
-        self.subtract.setText(_translate("window", "subtract"))
-        self.ticket.setText(_translate("window", "1"))
-        self.btn_open.setText(_translate("window", "Open window 1"))
-
-    def print_click(self):
-        print("click!")
-    def print_click_subtract(self):
-        print("se resto!")
-
-    def add_click(self):
-        value = int(self.ticket.text())
-        values = 1
-        self.ticket.setText(str(values + value))
-    def down_click(self):
-        value = int(self.ticket.text())
-        values = -1
-        self.ticket.setText(str(values + value))
+        self.btn_open.setText(_translate("window", "Count Add Subtract"))
 
 if __name__ == "__main__":
     import sys
