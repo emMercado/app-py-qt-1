@@ -13,6 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from OtherWindow import Ui_OtherWindow
 from Calculator import Ui_calculator
 from Crud import Ui_crud
+from Login import Ui_WindowLogin
 
 class Ui_window(object):
 
@@ -37,6 +38,13 @@ class Ui_window(object):
         #window.hide()
         self.window.show()
 
+    def openWindowLogin(self):
+        self.window = QtWidgets.QMainWindow()
+        self.ui = Ui_WindowLogin()
+        self.ui.setupUi (self.window)
+        #window.hide()
+        self.window.show()
+
     def setupUi(self, window):
         window.setObjectName("window")
         window.resize(800, 600)
@@ -51,11 +59,15 @@ class Ui_window(object):
         self.btnCrud = QtWidgets.QPushButton(self.centralwidget)
         self.btnCrud.setGeometry(QtCore.QRect(40, 150, 191, 25))
         self.btnCrud.setObjectName("btnCrud")
+        self.btnLogin = QtWidgets.QPushButton(self.centralwidget)
+        self.btnLogin.setGeometry(QtCore.QRect(40, 210, 191, 25))
+        self.btnLogin.setObjectName("btnCrud")
         window.setCentralWidget(self.centralwidget)
 
         self.btn_open.clicked.connect(self.openWindow)
         self.btn_calc.clicked.connect(self.openWindowCalc)
         self.btnCrud.clicked.connect(self.openWindowCrud)
+        self.btnLogin.clicked.connect(self.openWindowLogin)
 
         self.retranslateUi(window)
         QtCore.QMetaObject.connectSlotsByName(window)
@@ -66,6 +78,7 @@ class Ui_window(object):
         self.btn_open.setText(_translate("window", "Count Add Subtract"))
         self.btn_calc.setText(_translate("window", "Calculator"))
         self.btnCrud.setText(_translate("window", "Crud"))
+        self.btnLogin.setText(_translate("window", "Login"))
 
 if __name__ == "__main__":
     import sys

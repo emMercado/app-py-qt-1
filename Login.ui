@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>window</class>
- <widget class="QMainWindow" name="window">
+ <class>WindowLogin</class>
+ <widget class="QMainWindow" name="WindowLogin">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,59 +11,59 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Main window xd</string>
+   <string>Login interface</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="btn_open">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>30</y>
-      <width>191</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Count Add &amp; Subtract</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_calc">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>90</y>
-      <width>191</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Calculator</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnCrud">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>150</y>
-      <width>191</width>
-      <height>25</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>CRUD USERS</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="btnLogin">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>210</y>
+      <x>300</x>
+      <y>260</y>
       <width>191</width>
       <height>25</height>
      </rect>
     </property>
     <property name="text">
      <string>Login</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblwelcome">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>40</y>
+      <width>211</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Welcome to Login Interface</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="inputUser">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>110</y>
+      <width>241</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="inputPass">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>160</y>
+      <width>241</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
